@@ -1,0 +1,394 @@
+<html>
+  <head>
+       <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+  	<style>
+body {background-image:url('pink_rice.png');}
+ .filldiv{
+ 		height: 100vh;
+ 		width: 100vw;
+ 	}
+ .box{
+        border: 4px solid #aaa; /*getting border*/
+        border-radius: 4px; /*rounded border*/
+        color: #000; /*text color*/
+        font-size: 250%;
+        text-align: center;
+        height: auto;
+        width: auto;
+    }
+  .dropdown{
+        border: 1px solid #aaa; /*getting border*/
+        border-radius: 4px; /*rounded border*/
+        color: #000; /*text color*/
+        width: 80%;
+        height:6%;
+        font-size:20px;
+        visibility:visible;
+    }
+    .datePicker{
+        border: 1px solid #aaa; /*getting border*/
+        border-radius: 4px; /*rounded border*/
+        color: #000; /*text color*/
+        width: 80%;
+        height:6%;
+        font-size:20px;
+    }
+  .presentButton{
+  		border: 1px solid #aaa; /*getting border*/
+        border-radius: 4px; /*rounded border*/
+        background: #9fdfbf;
+        color:#000; /*text color*/
+        font-size: 250%;
+        height: 10%;
+        width: 50%;
+    }
+  .absentButton{
+  		border: 1px solid #aaa; /*getting border*/
+        border-radius: 4px; /*rounded border*/
+        background: #ff6666;
+        color: #000; /*text color*/
+        font-size: 250%;
+        height: 10%;
+        width: 50%;
+    }
+    
+        .authorize-button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.authorize-button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:#dfdfdf;
+}
+.authorize-button:active {
+	position:relative;
+	top:1px;
+}
+
+.datagrid table { border-collapse: collapse; text-align: center; width: 100%; } .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #006699; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#ffffff; font-size: 15px; font-weight: bold; border-left: 1px solid #0070A8; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #00496B; border-left: 1px solid #E1EEF4;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #006699;background: #E1EEF4;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #006699;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }   
+</style>
+
+    <script type="text/javascript">
+      // Your Client ID can be retrieved from your project in the Google
+      // Developer Console, https://console.developers.google.com
+      // var CLIENT_ID = '945140155698-d85dtu9fuklhjsv893emj2qo13tijdac.apps.googleusercontent.com';
+      var CLIENT_ID = '352096003034-meuik27c5an7bn887akfr7srosdvp8c4.apps.googleusercontent.com';
+
+      var SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
+
+      /**
+       * Check if current user has authorized this application.
+       */
+      function checkAuth() {
+        var DataDiv= document.getElementById('filldiv');
+          DataDiv.style.display = 'none';
+        gapi.auth.authorize(
+          {
+            'client_id': CLIENT_ID,
+            'scope': SCOPES.join(' '),
+            'immediate': true
+          }, handleAuthResult);
+      }
+
+      /**
+       * Handle response from authorization server.
+       *
+       * @param {Object} authResult Authorization result.
+       */
+      function handleAuthResult(authResult) {
+        var authorizeDiv = document.getElementById('authorize-div');
+        var DataDiv= document.getElementById('filldiv');
+        if (authResult && !authResult.error) {
+          // Hide auth UI, then load client library.
+          authorizeDiv.style.display = 'none';
+            DataDiv.style.display = 'inline';
+          loadSheetsApi();
+         
+        } else {
+          // Show auth UI, allowing the user to initiate authorization by
+          // clicking authorize button.
+          authorizeDiv.style.display = 'inline';
+          DataDiv.style.display = 'none';
+        }
+      }
+
+      /**
+       * Initiate auth flow in response to user clicking authorize button.
+       *
+       * @param {Event} event Button click event.
+       */
+      function handleAuthClick(event) {
+        gapi.auth.authorize(
+          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+          handleAuthResult);
+        return false;
+      }
+
+      /**
+       * Load Sheets API client library.
+       */
+      function loadSheetsApi() {
+        var discoveryUrl =
+            'https://sheets.googleapis.com/$discovery/rest?version=v4';
+        gapi.client.load(discoveryUrl).then(function(value) {
+                                                listCentres();
+                                            }, function(reason) {
+                                              console.log(reason); // Error!
+                                            });
+
+      }
+
+       /**
+      Set Center name from dropdown selection
+      */
+      var centerName=null;
+      function setCenter(val)
+      {
+      	centerName = val;
+        if(document.getElementById("datepicker").value != " Select Date")
+      	setDate(document.getElementById("datepicker").value);
+      }
+      
+      /*
+    * Get the centre names from the spreadsheet :
+    * 
+    */
+        function listCentres()
+        {
+            selectHTML="";
+            gapi.client.sheets.spreadsheets.get({spreadsheetId: '1V3r6o0vDwdhWyon-j9qeKDtzqyvZpTI_EmATZtFlJDU'}).then(function(response) {
+                    var range = response.result;
+                    var sheetsnum=range.sheets;
+                        selectHTML='<select name="value" id="selectCenter" class="dropdown" onchange="setCenter(this.value)"><option>Select Center</option>';
+                      for(sheet in sheetsnum)
+                          {
+                              selectHTML+="<option>"+sheetsnum[sheet].properties.title+"</option>";
+                              console.log(sheetsnum[sheet].properties.title);
+                          }
+                        selectHTML+="</select>";
+                 document.getElementById('CentreList').innerHTML=selectHTML;
+            });
+            
+       
+        }
+        
+        /**
+       * Print the names and majors of students in a sample spreadsheet:
+       * 
+       */
+        var baseCol=2;
+        var baseRow=7;
+        var studList;
+        var studListIdx;
+        var colIdx = 999;
+        var AllValues=new Array();
+        
+      function listMajors(_callback) {
+          if(centerName==null)
+              {
+                  alert("Please select a centre.");
+                  return false;
+              }
+      	gapi.client.sheets.spreadsheets.values.get({
+          spreadsheetId: '1V3r6o0vDwdhWyon-j9qeKDtzqyvZpTI_EmATZtFlJDU',
+          range: centerName+"!b7:ZZZ",
+        }).then(function(response) {
+          studList = response.result;
+          studListIdx =1;
+          showFirst();
+            _callback();  
+        });
+      }
+
+      function showFirst()
+      {
+      	//studList.values[idx][0] : Name
+      	//alert(studList.value[studListIdx++][0]);
+      	document.getElementById('txtar').innerHTML = studList.values[studListIdx][0];
+        document.getElementById('myTable').innerHTML="<tr id='value'><th>Name</th><th>Attendance</th></tr>";
+      }
+      /**
+      display student name in text area
+      */
+      function moveToNext(val)
+      {
+      	//studList.values[idx][0] : Name
+      	//alert(studList.value[studListIdx++][0]);
+      	//update studListIdx
+      	studListIdx = studListIdx+1; //this pre-increment to updating the sheet, takes care of mapping from programmer's index to user's index as well
+      	//write to drive at idx=studlistidx,colIdx:----------------------------://
+//      	gapi.client.sheets.spreadsheets.values.update({
+//      	  spreadsheetId: '1YB4tLKv3CAW1IGog1Mru6xg6-SjPuuMzivnHV-sE5zM',
+//          range: centerName+"!"+getLiteral(colIdx)+(studListIdx+baseRow-1),
+//          valueInputOption: 'RAW',
+//          values: [ [val] ]
+//      	}).then(function(response) {
+//                    console.log(response);
+//                });
+          if(studListIdx<=studList.values.length)
+              {
+                mycolor="#9fdfbf";
+                AllValues.push([val]);
+                if(val=="Absent")
+                    {
+                    mycolor="#ff6666";
+                    }
+                updateVal="<tr bgcolor="+mycolor+"><td>"+studList.values[studListIdx-1][0]+"</td><td>"+val+"</td></tr>";
+                document.getElementById('myTable').insertAdjacentHTML("beforeend",updateVal);  
+                //console.log(AllValues);
+              }
+         
+      	if(studListIdx>=studList.values.length/*-1 for header where date is recorded and not Present/Absent*/)
+      	{
+      		alert("Attendance Recorded. Please submit now.");
+            //submitToSheet();
+            return;
+      	}
+      	document.getElementById('txtar').innerHTML = studList.values[studListIdx][0];
+      }
+        
+    /*
+    * Submitting data to the sheet
+    */    
+    function submitToSheet()
+    {
+        
+        if(centerName==null)
+            {
+                alert("Please select a center.");
+                document.getElementById("datepicker").value = " Select Date";
+                return;
+            }
+        if(document.getElementById("datepicker").value == " Select Date")
+            {
+                alert("Please select a date");
+                return;
+            }
+        
+        if(studListIdx<studList.values.length)
+            {
+                alert("Attendence is not yet complete. Please complete the attendence and then submit the form.");
+                return;
+            }
+        
+        gapi.client.sheets.spreadsheets.values.update({
+      	  spreadsheetId: '1V3r6o0vDwdhWyon-j9qeKDtzqyvZpTI_EmATZtFlJDU',
+          range: centerName+"!"+getLiteral(colIdx)+(baseRow),
+          valueInputOption: 'RAW',
+          values: AllValues
+      	}).then(function(response) {
+                    console.log(response);
+                    alert("Successfully Submitted");
+                    location.reload(true);
+                });
+        
+        
+    }
+        
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('output');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+
+      function setDate(val){
+          listMajors(function(response){
+
+                       colIdx = baseCol+studList.values[0].length;
+//                    gapi.client.sheets.spreadsheets.values.update({
+//                      spreadsheetId: '1YB4tLKv3CAW1IGog1Mru6xg6-SjPuuMzivnHV-sE5zM',
+//                      range: centerName+"!"+getLiteral(colIdx)+baseRow,
+//                      valueInputOption: 'RAW',
+//                      values: [ [val] ]
+//
+//                    }).then(function(response) {
+//                                console.log(response);
+//                            });
+                                  AllValues=[];
+                            AllValues.push([val]);
+                   
+          });
+
+      }
+
+      function getLiteral(num)
+      {
+      	for (var ret = '', a = 1, b = 26; (num -= a) >= 0; a = b, b *= 26) {
+    		ret = String.fromCharCode(parseInt((num % b) / a) + 65) + ret;
+  		}
+  		return ret;
+      }
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+
+  </head>
+
+
+  <body>
+      <header> <h1 align="center">Attendence Tracker</h1></header>
+   <div id="authorize-div" style="padding:20px;">
+   	<center>
+     <!-- <span>Authorize access to Google Sheets API</span>-->
+            <button id="authorize-button" onclick="handleAuthClick(event)" class="authorize-button">Login</button>
+    </div>
+    <!--<pre id="output"></pre>-->
+    <center>
+    <div class="filldiv" id="filldiv">
+     <div id="CentreList">
+         <select name="value" id="selectCenter" class="dropdown" onchange="setCenter(this.value)"><option>Select Center</option></select>
+    </div>
+		</br></br></br>
+		<input id="datepicker" class= "datepicker" type="text" name="today" onchange="setDate(this.value)" value=" Select Date"></br></br></br>
+		<p class="box" id="txtar"></p></br>   <!-- pre id output wala jugad lagao-->
+		<pre id="output"></pre>
+		<button class="presentButton" name="Present" value="Present" onclick="moveToNext(this.value)">Present</button></br></br></br>
+		<button class="absentButton" name="Absent" value="Absent" onclick="moveToNext(this.value)">Absent</button></br></br></br>
+        <div class="datagrid"><table id="myTable"><tr id="value"><th>Name</th><th>Attendance</th></tr></table></div></br></br>
+        <button class="authorize-button" class="submitButton" name="Submit" value="Submit" onclick="submitToSheet()">Submit</button></br></br></br>
+         <button class="authorize-button" class="resetButton" name="Reset" value="Reset" onclick="location.reload(true);">Reset</button></br></br></br>
+	</div>
+  </body>
+
+</html>

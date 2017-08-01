@@ -16,6 +16,12 @@ def index(request):
     )
 
 
+def attendance(request):
+    return render(request, 'attendance.html',
+    	{
+    	}
+    )
+
 def logout(request):
     auth_logout(request)
     return redirect('/teacher-portal')
