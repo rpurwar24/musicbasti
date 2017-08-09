@@ -25,7 +25,7 @@ SECRET_KEY = '^d0j!^jw(i^ax*9k=loka1htgn_4@6o-+nk90d_^m1(z3+-t7y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['musicbasti-dev.us-east-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['musicbasti-dev.us-east-2.elasticbeanstalk.com','localhost']
 
 
 # Application definition
@@ -126,7 +126,7 @@ STATIC_ROOT = join(os.path.dirname(BASE_DIR), 'staticfiles')
 
 
 STATICFILES_DIRS = (
-    join(BASE_DIR, '..', 'www', 'static'),
+    join(BASE_DIR, 'static'),
 )
 
 MEDIA_URL = '/media/'
