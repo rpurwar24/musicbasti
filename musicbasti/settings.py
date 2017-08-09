@@ -126,7 +126,7 @@ STATIC_ROOT = join(os.path.dirname(BASE_DIR), 'staticfiles')
 
 
 STATICFILES_DIRS = (
-    join(BASE_DIR, 'static'),
+    join(BASE_DIR, '..', 'www', 'static'),
 )
 
 MEDIA_URL = '/media/'
