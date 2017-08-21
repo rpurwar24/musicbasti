@@ -6,7 +6,7 @@
   <head>
     <title>Music Basti - Attendance Tracker</title>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
            <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
     <!-- Theme CSS -->
@@ -16,14 +16,36 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
+    <!-- jQuery -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+    <!-- Theme JavaScript -->
+    <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $("#datepicker").datepicker();
+      });
+    </script>
+
+  <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+  
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script async defer src="https://apis.google.com/js/api.js" 
+          onload="this.onload=function(){};handleClientLoad()" 
+          onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
-  	<style>
+
+<style>
 body {background-image:url('pink_rice.png');}
  .filldiv{
  		height: 100vh;
@@ -118,7 +140,7 @@ body {background-image:url('pink_rice.png');}
 .datagrid table { border-collapse: collapse; text-align: center; width: 100%; } .datagrid {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff; overflow: hidden; border: 1px solid #006699; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }.datagrid table td, .datagrid table th { padding: 3px 10px; }.datagrid table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#ffffff; font-size: 15px; font-weight: bold; border-left: 1px solid #0070A8; } .datagrid table thead th:first-child { border: none; }.datagrid table tbody td { color: #00496B; border-left: 1px solid #E1EEF4;font-size: 12px;font-weight: normal; }.datagrid table tbody .alt td { background: #E1EEF4; color: #00496B; }.datagrid table tbody td:first-child { border-left: none; }.datagrid table tbody tr:last-child td { border-bottom: none; }.datagrid table tfoot td div { border-top: 1px solid #006699;background: #E1EEF4;} .datagrid table tfoot td { padding: 0; font-size: 12px } .datagrid table tfoot td div{ padding: 2px; }.datagrid table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }.datagrid table tfoot  li { display: inline; }.datagrid table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #006699;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }.datagrid table tfoot ul.active, .datagrid table tfoot ul a:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}div.dhtmlx_window_active, div.dhx_modal_cover_dv { position: fixed !important; }   
 </style>
 
-    <script type="text/javascript">
+<script type="text/javascript">
       // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
       // var CLIENT_ID = '945140155698-d85dtu9fuklhjsv893emj2qo13tijdac.apps.googleusercontent.com';
@@ -375,13 +397,10 @@ body {background-image:url('pink_rice.png');}
   		return ret;
       }
     </script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
-
   </head>
 
 
-  <body>
+<body>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -394,39 +413,41 @@ body {background-image:url('pink_rice.png');}
             </div>
         </div>
         <!-- /.container-fluid -->
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    </nav> <br><br><br><br><br>
     <br>
 
-    <header> <h1 align="center">Attendance Tracker</h1></header>
+    <h1 align="center">Attendance Tracker</h1>
 
-   <div id="authorize-div" style="padding:20px;">
-   	<center>
-     <!-- <span>Authorize access to Google Sheets API</span>-->
+   	<div id="authorize-div" style="padding:20px;">
+   		<center>
+     	<!-- <span>Authorize access to Google Sheets API</span>-->
             <button id="authorize-button" onclick="handleAuthClick(event)" class="authorize-button">Login</button>
     </div>
     <!--<pre id="output"></pre>-->
     <center>
     <div class="filldiv" id="filldiv">
-     <div id="CentreList">
-         <select name="value" id="selectCenter" class="dropdown" onchange="setCenter(this.value)"><option>Select Center</option></select>
-    </div>
-		</br></br></br>
+     	<div id="CentreList">
+         	<select name="value" id="selectCenter" class="dropdown" onchange="setCenter(this.value)">
+         		<option>Select Center</option>
+         	</select>
+    	</div> </br></br></br>
+
 		<input id="datepicker" class= "datepicker" type="text" name="today" onchange="setDate(this.value)" value=" Select Date"></br></br></br>
+
 		<p class="box" id="txtar"></p></br>   <!-- pre id output wala jugad lagao-->
 		<pre id="output"></pre>
 		<button class="presentButton" name="Present" value="Present" onclick="moveToNext(this.value)">Present</button></br></br></br>
 		<button class="absentButton" name="Absent" value="Absent" onclick="moveToNext(this.value)">Absent</button></br></br></br>
-        <div class="datagrid"><table id="myTable"><tr id="value"><th>Name</th><th>Attendance</th></tr></table></div></br></br>
+        <div class="datagrid">
+        	<table id="myTable"><tr id="value"><th>Name</th><th>Attendance</th></tr></table>
+        </div></br></br>
+
         <button class="authorize-button" class="submitButton" name="Submit" value="Submit" onclick="submitToSheet()">Submit</button></br></br></br>
+
          <button class="authorize-button" class="resetButton" name="Reset" value="Reset" onclick="location.reload(true);">Reset</button></br></br></br>
 	</div>
 
-      <footer class="text-center">
+    <footer class="text-center">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
@@ -477,24 +498,6 @@ body {background-image:url('pink_rice.png');}
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-
-    <!-- jQuery -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!-- Contact Form JavaScript -->
-    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-    <script src="{% static 'js/contact_me.js' %}"></script>
-    <!-- Theme JavaScript -->
-    <script src="{% static 'js/freelancer.min.js' %}"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script async defer src="https://apis.google.com/js/api.js" 
-        onload="this.onload=function(){};handleClientLoad()" 
-        onreadystatechange="if (this.readyState === 'complete') this.onload()">
-</script>
 
   </body>
 
