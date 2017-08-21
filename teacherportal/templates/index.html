@@ -62,7 +62,7 @@
                     </li> -->
                     {% if not request.user.is_anonymous %}
                     <li class="page-scroll">
-                        <p>Welcome {{ request.user }}</p>
+                        <a href="#">Welcome {{ request.user }}</a>
                     </li>
                     <li class="page-scroll">
                         <a href="{% url 'teacherportal:teacher_logout' %}">SignOut</a>
