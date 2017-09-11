@@ -25,7 +25,7 @@ SECRET_KEY = '^d0j!^jw(i^ax*9k=loka1htgn_4@6o-+nk90d_^m1(z3+-t7y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['musicbasti-dev.us-east-2.elasticbeanstalk.com','localhost']
+ALLOWED_HOSTS = ['musicbasti-dev.us-east-2.elasticbeanstalk.com','localhost','18.220.30.84']
 
 
 # Application definition
